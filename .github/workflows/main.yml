@@ -17,7 +17,7 @@ jobs:
       #     who-to-greet: 'Mona the Octocat'
       # - run: echo random-number ${{ steps.foo.outputs.random-number }}
       #   shell: bash
-      - run: echo "LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUFNd0FBQUF0emMyZ3RaVwpReU5UVXhPUUFBQUNEUjZkalcyUFU2ejVQVXAwLzJLUkVBV2xBNzdYZWhXN0t6RVg0SXlVSlZVd0FBQUpBRzZUU3VCdWswCnJnQUFBQXR6YzJndFpXUXlOVFV4T1FBQUFDRFI2ZGpXMlBVNno1UFVwMC8yS1JFQVdsQTc3WGVoVzdLekVYNEl5VUpWVXcKQUFBRUNCZEJHR0w1cXRPZW0raFI0Vk9kQWRST01VelBRZDVrY0dSdG01bkNzMVh0SHAyTmJZOVRyUGs5U25UL1lwRVFCYQpVRHZ0ZDZGYnNyTVJmZ2pKUWxWVEFBQUFDV2RvTFdGamRHbHZiZ0VDQXdRPQotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K" | base64 --decode > ssh_key
+      - run: echo "${{ secrets.GH_ACTION_SSH_KEY_BASE64 }}" | base64 --decode > ssh_key
         shell: bash
       - run: chmod 400 ssh_key
         shell: bash
