@@ -11,9 +11,9 @@ jobs:
         with:
           private-action: Sp4Rx/gh-action@v1
           private-action-token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
-      - uses: Sp4Rx/gh-action@v1
-        with:
-          who-to-greet: 'Mona the Octocat'
+      # - uses: Sp4Rx/gh-action@v1
+      #   with:
+      #     who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
       # - run: echo "${{ secrets.GH_ACTION_SSH_KEY_BASE64 }}" | base64 --decode > ssh_key
