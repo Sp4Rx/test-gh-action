@@ -6,6 +6,10 @@ jobs:
     name: A job to say hello
     steps:
       - uses: actions/checkout@v3
+        with:
+          repository: Sp4Rx/gh-action@v1
+          token: ${{ secrets.ACCESS_TOKEN }}
+      - uses: actions/checkout@v3
       - id: foo
         uses: Sp4Rx/gh-action@v1
         with:
