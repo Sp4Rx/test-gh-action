@@ -9,7 +9,7 @@ jobs:
       - run: echo "BYE"
       - uses: bagbyte/use-private-action@v0.0.2
         with:
-          private-action: 
+          private-action: Sp4Rx/gh-action@v1
           private-action-token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
