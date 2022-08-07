@@ -7,10 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo "BYE"
-      - uses: actions/checkout@v2
-        with:
-          repository: Sp4Rx/gh-action@v1
-          ssh-key: ${{ secrets.GH_ACTION_SSH_KEY }}
       - id: foo
         uses: Sp4Rx/gh-action@v1
         with:
