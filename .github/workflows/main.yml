@@ -10,9 +10,10 @@ jobs:
       #   with:
       #     repository: Sp4Rx/gh-action@v1
       #     token: ${{ secrets.GH_KEY }}
-      - id: foo
-        uses: Sp4Rx/gh-action@v1
-        with:
-          who-to-greet: 'Mona the Octocat'
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
+      # - id: foo
+      #   uses: Sp4Rx/gh-action@v1
+      #   with:
+      #     who-to-greet: 'Mona the Octocat'
+      # - run: echo random-number ${{ steps.foo.outputs.random-number }}
+      #   shell: bash
+      echo "BYE"
