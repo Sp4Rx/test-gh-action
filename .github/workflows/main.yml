@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: Sp4Rx/gh-action@v1
-          token: ${{ secrets.GH_ACTION_SSH_KEY }}
+          ssh-key: ${{ secrets.GH_ACTION_SSH_KEY }}
       - id: foo
         uses: Sp4Rx/gh-action@v1
         with:
