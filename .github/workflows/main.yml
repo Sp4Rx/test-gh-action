@@ -7,21 +7,21 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo "BYE"
-      # - uses: actions/checkout@v3
-      #   with:
-      #     repository: Sp4Rx/gh-action@v1
-      #     ssh-key: ${{ secrets.GH_ACTION_SSH_KEY }}
-      # - id: foo
-      #   uses: Sp4Rx/gh-action@v1
-      #   with:
-      #     who-to-greet: 'Mona the Octocat'
-      # - run: echo random-number ${{ steps.foo.outputs.random-number }}
+      - uses: actions/checkout@v2
+        with:
+          repository: Sp4Rx/gh-action@v1
+          ssh-key: ${{ secrets.GH_ACTION_SSH_KEY }}
+      - id: foo
+        uses: Sp4Rx/gh-action@v1
+        with:
+          who-to-greet: 'Mona the Octocat'
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
+        shell: bash
+      # - run: echo "${{ secrets.GH_ACTION_SSH_KEY_BASE64 }}" | base64 --decode > ssh_key
       #   shell: bash
-      - run: echo "${{ secrets.GH_ACTION_SSH_KEY_BASE64 }}" | base64 --decode > ssh_key
-        shell: bash
-      - run: chmod 400 ssh_key
-        shell: bash
-      - run: git clone git@github.com:Sp4Rx/gh-action.git --config core.sshCommand="ssh -i ssh_key"
-        shell: bash
-      - run: ls
+      # - run: chmod 400 ssh_key
+      #   shell: bash
+      # - run: git clone git@github.com:Sp4Rx/gh-action.git --config core.sshCommand="ssh -i ssh_key"
+      #   shell: bash
+      # - run: ls
 
