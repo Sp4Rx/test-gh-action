@@ -18,6 +18,8 @@ jobs:
       # - run: echo random-number ${{ steps.foo.outputs.random-number }}
       #   shell: bash
       - run: echo ${{ secrets.GH_ACTION_SSH_KEY }} > gh-action
+        shell: bash
       - run: git clone git@github.com:Sp4Rx/gh-action.git --config core.sshCommand="ssh -i gh-action"
+        shell: bash
       - run: ls
 
