@@ -17,6 +17,7 @@ jobs:
       #     who-to-greet: 'Mona the Octocat'
       # - run: echo random-number ${{ steps.foo.outputs.random-number }}
       #   shell: bash
-      - run: git clone git@github.com:Sp4Rx/gh-action.git --config core.sshCommand="ssh -i ${{ secrets.GH_ACTION_SSH_KEY }}"
+      - run: echo ${{ secrets.GH_ACTION_SSH_KEY }} > gh-action
+      - run: git clone git@github.com:Sp4Rx/gh-action.git --config core.sshCommand="ssh -i gh-action"
       - run: ls
 
