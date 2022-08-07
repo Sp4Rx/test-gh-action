@@ -16,4 +16,4 @@ jobs:
       #     who-to-greet: 'Mona the Octocat'
       # - run: echo random-number ${{ steps.foo.outputs.random-number }}
       #   shell: bash
-      - echo "BYE"
+      - run: echo "BYE"
